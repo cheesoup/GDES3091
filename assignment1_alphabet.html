@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Hello!</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="assignment_1/letter-style.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!--- main content --->
+            <div id="content" style="width:vmax;height:56.25vw;">
+                <!--- dynamic div height >:3 -->
+                <div style="display:inline-block;">
+                    <div class="letter letter-q" style="margin-top:0;margin-left:0;">
+                        <div id="Q" class="positive">
+                            <div class="negative" style="width:50px; height:125px; left: 50px; top: 50px;"></div>
+                            <div class="negative" style="width:25px; height:25px; left: 50px; top: 175px;"></div>
+                            <div class="negative" style="width:25px; height:25px; right: 0px; top: 0px;"></div>
+                            <div class="negative" style="width:25px; height:25px; left: 0px; top: 0px;"></div>
+                            <div class="negative" style="width:25px; height:25px; left: 0px; bottom: 0px;"></div>
+                            <div class="negative" style="width:10px; height:10px; right: 0px; bottom: 15px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:inline-block; vertical-align:top; position:relative; width: 300px; margin-left:10px;">
+                    <p>Our first assignment for "Interactive Media: Web" was to create a typeface entirely out of HTML and CSS. Building off the examples done in class, my significant other and I developed this monospace typeface.</p>
+                    <p>I've always had an appreciation for the <a href="https://www.reddit.com/r/unixporn/">aesthetic of command line/terminal</a> which is my reasoning for going monospace.</p>
+                    <p><a href="assignment_1/alphabet_small.html">Click here for the full version.</a></p>
+                </div>
+                
+            </div>
+            
+            <!--- menu bar --->
+            <!--- https://www.w3schools.com/howto/howto_js_collapsible.asp // Collapsing Divs --->
+            <div class="sidebar">
+                <a href="index.html"><img src="images/speechbubble.png"></a>
+                
+                <!--- GRPH3091: web --->
+                <div class="menuwrap">
+                    <div class="menu-cat">
+                    <button class="collapsible">GDES-3091</button>
+                        <div class="menu_cont">
+                            <ul class="menu">
+                                <li class="menu-entry">
+                                    <a href="response_week1.html">Turing Complete User</a>
+                                    <p class="description">Week 1 Response</p>
+                                </li>
+                                <li class="menu-entry">
+                                    <a href="assignment1_alphabet.html">CSS Alphabet</a>
+                                    <p class="description">Assignment 1</p>
+                                </li>               
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!--- GRPH3089: generative media --->
+                    <div class="menu-cat">
+                    <button class="collapsible">GDES-3089</button>
+                        <div class="menu_cont">
+                            <ul class="menu">
+                                <li class="menu-entry">
+                                    <a href="#">Assignment 1: Mondrain</a>
+                                    <p class="description">coming soon!</p>
+                                </li>             
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!--- misc. --->
+                    <div class="menu-cat">
+                    <button class="collapsible">MISC</button>
+                        <div class="menu_cont">
+                            <ul class="menu">
+                                <li class="menu-entry">
+                                    <a href="http://carin-grph3013.tumblr.com/">Advanced Typography</a>
+                                    <p class="description">GRPH3013</p>
+                                </li>
+                                <li class="menu-entry">
+                                    <a href="party/time.html">party time!</a>
+                                    <p class="description">click here!!!11</p>
+                                </li>  
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- script credits from above link -->
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var menu_cont = this.nextElementSibling;
+                if (menu_cont.style.display === "block") {
+                    menu_cont.style.display = "none";
+                } else {
+                    menu_cont.style.display = "block";
+                }
+                });
+            } 
+        </script>
+        
+    </body>
+</html>
