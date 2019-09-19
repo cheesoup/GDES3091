@@ -1,0 +1,33 @@
+.letter {
+	width:300px; /*resize as you see fit */
+	height:400px; /*resize as you see fit */
+	display:inline-block; /* this makes block level elements act like letters (so they sit next to eachother) */
+	border:20px solid #000; /*feel free to remove or hide this rule */
+	position:relative; /* IMPORTANT: any element with position:absolute inside this container will now be relative to bounds of this element; */
+    vertical-align:middle;
+    margin: 20px;
+    box-shadow: 25px 25px #a6a6a6;
+}
+div.positive {
+    width: 150px;
+    height: 250px;
+    background-color:black;
+    position:relative;
+    left:50%;
+    top:50%;
+    margin:-125px 0 0 -75px;
+    /* https://tutorialzine.com/2010/03/centering-div-vertically-and-horizontally */
+}
+div.positiveWide {
+    width: 250px;
+    height: 250px;
+    background-color:black;
+    position:relative;
+    left:50%;
+    top:50%;
+    margin:-125px 0 0 -125px;
+}
+div.negative {
+    background-color:white;
+    position:absolute;
+}

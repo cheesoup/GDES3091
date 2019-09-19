@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <title>tfw alive</title>
+        <style>
+            body {
+                background-image: url("../images/tilebg.gif");
+            }
+            .vertical-center {
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+            #main {
+                width: 500px;
+                position: relative;
+            }
+            .chris_doll {
+                background-image: url("../images/chris_doll.gif");
+                background-size: 105%;
+                height: 260px;
+                margin: 0 auto;
+                padding: 20px;
+                border: #FFF solid 5px;
+            }
+            h1 {
+                vertical-align: middle;
+                text-align: center;
+                opacity: 0;
+                filter: alpha(opacity=0); /* For IE8 and earlier */
+                -webkit-transition: 0.5s; /* Safari prior 6.1 */
+                font-family: monospace;
+                font-size: 110px;
+                line-height: 70px;
+                margin-top:4%;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: black;
+            }
+            h1:hover {
+                opacity: 1;
+                filter: alpha(opacity=100); /* For IE8 and earlier */
+                -webkit-transition: 1s; /* Safari prior 6.1 */
+            }
+            a {
+                text-decoration: none;
+                color: #FFF;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="vertical-center">
+            <div id="main" style="margin-bottom:10px;">
+                <a href="../index.html"><div class="chris_doll"><h1>DO<br/>NOT</br/>WANT</h1></div></a>
+                <audio id="player" src="partyboi69.mp3" autoplay="true" type="audio/ogg"></audio>
+            </div>
+            <div id="webplayback">
+            <button onclick="document.getElementById('player').play()">Play</button>
+            <button onclick="document.getElementById('player').pause()">Pause</button>
+            <button onclick="document.getElementById('player').volume+=0.1">Volume Up</button>
+            <button onclick="document.getElementById('player').volume-=0.1">Volume Down</button>
+        </div> 
+        </div>
+    </body>
+</html>
