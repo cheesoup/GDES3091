@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+        div.positive {
+            width: 300px;
+            height: 500px;
+            background-color:black;
+            position:relative;
+            margin: 20px;
+            display:inline-block;
+        }
+        div.positiveWide {
+            width: 500px;
+            height: 500px;
+            background-color:black;
+            position:relative;
+            margin: 20px;
+            display:inline-block;
+        }
+        div.negative {
+            background-color:white;
+            position:absolute;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="A" class="positive">
+            <div class="negative" style="width:100px; height:200px; left: 100px; bottom: 0px;"></div>
+            <div class="negative" style="width:100px; height:100px; left: 100px; top: 100px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; top: 0px;"></div>
+        </div>
+        <div id="B" class="positive">
+            <div class="negative" style="width:100px; height:100px; left: 100px; top: 100px;"></div>
+            <div class="negative" style="width:100px; height:100px; left: 100px; bottom: 100px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:20px; height:20px; right: 0px; bottom: 240px;"></div>
+        </div>
+        <div id="C" class="positive">
+            <div class="negative" style="width:200px; height:300px; left: 100px; top: 100px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:20px; height:20px; right: 0px; top: 0px;"></div>
+            <div class="negative" style="width:20px; height:20px; right: 0px; bottom: 0px;"></div>
+        </div>
+        <div id="D" class="positive">
+            <div class="negative" style="width:100px; height:300px; left: 100px; top: 100px"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom: 0px;"></div>
+        </div>
+        <div id="E" class="positive">
+            <div class="negative" style="width:200px; height:100px; right: 0px; top: 100px;"></div>
+            <div class="negative" style="width:200px; height:100px; right: 0px; bottom: 100px;"></div>
+            <div class="negative" style="width:50px; height:100px; right: 0px; bottom: 200px;"></div>
+        </div>
+        <div id="F" class="positive">
+            <div class="negative" style="width:200px; height:100px; right: 0px; top: 100px;"></div>
+            <div class="negative" style="width:200px; height:200px; right: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:100px; right: 0px; bottom: 200px;"></div>
+        </div>
+        <div id="G" class="positive">
+            <div class="negative" style="width:100px; height:100px; left: 100px; bottom: 100px;"></div>
+            <div class="negative" style="width:200px; height:100px; right: 0px; top: 100px;"></div>
+            <div class="negative" style="width:50px; height:100px; left: 100px; top: 200px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:20px; height:20px; right: 0px; top: 0px;"></div>
+            <div class="negative" style="width:20px; height:20px; right: 0px; bottom: 0px;"></div>
+        </div>
+        <div id="H" class="positive">
+            <div class="negative" style="width:100px; height:200px; left: 100px;"></div>
+            <div class="negative" style="width:100px; height:200px; left: 100px; bottom:0px;"></div>
+        </div>
+        <div id="I" class="positive">
+            <div class="negative" style="width:100px; height:300px; left: 0px; top: 100px;"></div>
+            <div class="negative" style="width:100px; height:300px; right: 0px; top: 100px;"></div>
+        </div>
+        <div id="J" class="positive">
+            <div class="negative" style="width:100px; height:100px; left: 0px; top:0"></div>
+            <div class="negative" style="width:200px; height:200px; left: 0px; top:100px;"></div>
+            <div class="negative" style="width:100px; height:100px; left: 100px; bottom:100px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom: 0px;"></div>
+        </div>
+            <div id="K" class="positive">
+            <div class="negative" style="width:100px; height:150px; left: 100px;"></div>
+            <div class="negative" style="width:100px; height:250px; left: 100px; bottom:0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom:300px;"></div>
+            <div class="negative" style="width:20px; height:20px; right: 0px; bottom:280px;"></div>   
+            <div class="negative" style="width:20px; height:20px; right: 0px; bottom:350px;"></div>   
+        </div>
+        <div id="L" class="positive">
+            <div class="negative" style="width:200px; height:400px; right: 0px;"></div>
+        </div>
+        <div id="M" class="positiveWide">
+            <div class="negative" style="width:100px; height:250px; left: 100px; bottom: 0px;"></div>
+            <div class="negative" style="width:100px; height:250px; right: 100px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 100px; bottom: 250px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 100px; bottom: 250px;"></div>
+            <div class="negative" style="width:100px; height:200px; right: 200px; bottom: 0px;"></div>
+            <div class="negative" style="width:100px; height:150px; right: 200px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:100px; right: 150px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:100px; left: 150px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 100px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 100px; top: 0px;"></div>
+        </div>
+        <div id="N" class="positive">
+            <div class="negative" style="width:100px; height:100px; left: 100px;"></div>
+            <div class="negative" style="width:100px; height:200px; left: 100px; bottom:0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 100px;"></div>
+            <div class="negative" style="width:50px; height:100px; left: 100px; bottom:0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 150px; top:100px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 100px; bottom:200px;"></div>
+        </div>
+        <div id="O" class="positive">
+            <div class="negative" style="width:100px; height:300px; left: 100px; top: 100px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; bottom: 0px;"></div>
+        </div>
+        <div id="P" class="positive">
+            <div class="negative" style="width:100px; height:100px; left: 100px; top: 100px;"></div>
+            <div class="negative" style="width:200px; height:200px; left: 100px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom:200px;"></div>
+        </div>
+        <div id="O" class="positive">
+            <div class="negative" style="width:100px; height:250px; left: 100px; top: 100px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 100px; top: 350px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:20px; height:20px; right: 0px; bottom: 30px;"></div>
+        </div>
+        <div id="R" class="positive">
+            <div class="negative" style="width:100px; height:100px; left: 100px; top: 100px;"></div>
+            <div class="negative" style="width:100px; height:150px; left: 100px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 100px; bottom: 150px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom: 225px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; top: 0px;"></div>
+        </div>
+        <div id="S" class="positive">
+            <div class="negative" style="width:200px; height:100px; left: 100px; top: 100px"></div>
+            <div class="negative" style="width:200px; height:100px; right: 100px; bottom: 100px"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom: 250px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; top: 250px;"></div>
+        </div>
+
+    <!-- hello -->
+
+        <div id="T" class="positive">
+            <div class="negative" style="width:100px; height:400px; left: 0px; top: 100px;"></div>
+            <div class="negative" style="width:100px; height:400px; right: 0px; top: 100px;"></div>
+        </div>
+        <div id="U" class="positive">
+            <div class="negative" style="width:100px; height:350px; left: 100px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom: 0px;"></div>
+        </div>
+        <div id="V" class="positive">
+            <div class="negative" style="width:100px; height:300px; left: 100px;"></div>
+            <div class="negative" style="width:40px; height:50px; left: 130px; bottom:160px"></div>
+            <div class="negative" style="width:50px; height:100px; left: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 50px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:100px; right: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 50px; bottom: 0px;"></div>	
+        </div>
+        <div id="W" class="positiveWide">
+            <div class="negative" style="width:100px; height:250px; left: 100px; top: 0px;"></div>
+            <div class="negative" style="width:100px; height:250px; right: 100px; top: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 100px; top: 250px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 100px; top: 250px;"></div>
+            <div class="negative" style="width:100px; height:200px; right: 200px; top: 0px;"></div>
+            <div class="negative" style="width:100px; height:100px; right: 200px; bottom: 0px;"></div>
+            <div class="negative" style="width:40px; height:40px; right: 230px; bottom: 100px;"></div>
+
+            <div class="negative" style="width:50px; height:50px; left: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom: 0px;"></div>
+            
+            <div class="negative" style="width:50px; height:50px; left: 150px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 150px; bottom: 0px;"></div>
+        </div>
+        <div id="X" class="positive">
+            <div class="negative" style="width:100px; height:150px; left: 100px;"></div>
+            <div class="negative" style="width:40px; height:40px; left: 130px; top:150px"></div>
+            <div class="negative" style="width:100px; height:150px; left: 100px; bottom: 0px;"></div>
+            <div class="negative" style="width:40px; height:40px; left: 130px; bottom:150px"></div>
+            <div class="negative" style="width:40px; height:50px; left: 50px; bottom:225px;"></div>
+            <div class="negative" style="width:40px; height:50px; right: 50px; bottom:225px;"></div>
+            <div class="negative" style="width:60px; height:100px; left: 0px; bottom:200px;"></div>
+            <div class="negative" style="width:60px; height:100px; right: 0px; bottom:200px;"></div>
+            <div class="negative" style="width:20px; height:140px; left: 0px; bottom:180px;"></div>
+            <div class="negative" style="width:20px; height:140px; right: 0px; bottom:180px;"></div>
+        </div>
+        <div id="Y" class="positive">
+            <div class="negative" style="width:100px; height:150px; left: 100px;"></div>
+            <div class="negative" style="width:100px; height:250px; left: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:100px; height:250px; right: 0px; bottom: 0px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 0px; bottom: 250px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 0px; bottom: 250px;"></div>
+            <div class="negative" style="width:40px; height:40px; left: 130px; top:150px"></div>
+        </div>
+        <div id="Z" class="positive">
+            <div class="negative" style="width:50px; height:200px; left: 0px; top: 100px;"></div>
+            <div class="negative" style="width:50px; height:150px; left: 50px; top: 100px;"></div>
+            <div class="negative" style="width:50px; height:100px; left: 100px; top: 100px;"></div>
+            <div class="negative" style="width:50px; height:50px; left: 150px; top: 100px;"></div>
+            <div class="negative" style="width:50px; height:200px; right: 0px; bottom: 100px;"></div>
+            <div class="negative" style="width:50px; height:150px; right: 50px; bottom: 100px;"></div>
+            <div class="negative" style="width:50px; height:100px; right: 100px; bottom: 100px;"></div>
+            <div class="negative" style="width:50px; height:50px; right: 150px; bottom: 100px;"></div>
+        </div>
+    </body>
+</html>
