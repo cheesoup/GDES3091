@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0 0;
+            }
+            .box {
+                width: 50%;
+                height: 50%;
+            }
+            #blue-box {
+                background-color:blue;
+                position:absolute;
+                bottom:0;
+                right:0;
+            }
+            #red-box {
+                background-color:red;
+                width: 500px;
+                height: 500px;
+                position: relative;
+            }
+            #green-box {
+                background-color:greenyellow;
+                position:absolute;
+                top:0;
+                right:0;
+            }
+            #black-box {
+                background-color:black;
+                position:absolute;
+                bottom:0;
+                left:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="red-box" class="box">
+            <div id="green-box" class="box">
+                <div id="blue-box" class="box">
+                    <div id="black-box" class="box"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
