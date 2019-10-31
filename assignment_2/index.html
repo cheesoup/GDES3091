@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <title>Polyrhythmically Phasing Pendulums</title>
+    <meta charset="ISO-8859-1">
+    <!-- jquery import -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- tonejs import -->
+    <script src="https://tonejs.github.io/build/Tone.js"></script>
+    <!-- import roboto web font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="pendulums">
+        <div class="pendulum"><div id="pendulum0" class="penJS pElement"></div>
+          <div class="control pElement">
+            <select id="note0">
+              <option value="C">C</option>
+              <option value="C#">C#/Db</option>
+              <option value="D">D</option>
+              <option value="D#">D#/Eb</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="F#">F#/Gb</option>
+              <option value="G">G</option>
+              <option value="G#">G#/Ab</option>
+              <option value="A">A</option>
+              <option value="A#">A#/Bb</option>
+              <option value="B" selected="selected">B</option>
+            </select>
+            <select id="octave0">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5" selected="selected">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pendulum"><div id="pendulum1" class="penJS pElement"></div>
+          <div class="control pElement">
+            <select id="note1">
+              <option value="C" selected="selected">C</option>
+              <option value="C#">C#/Db</option>
+              <option value="D">D</option>
+              <option value="D#">D#/Eb</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="F#">F#/Gb</option>
+              <option value="G">G</option>
+              <option value="G#">G#/Ab</option>
+              <option value="A">A</option>
+              <option value="A#">A#/Bb</option>
+              <option value="B">B</option>
+            </select>
+            <select id="octave1">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6" selected="selected">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pendulum"><div id="pendulum2" class="penJS pElement"></div>
+          <div class="control pElement">
+            <select id="note2">
+              <option value="C">C</option>
+              <option value="C#">C#/Db</option>
+              <option value="D">D</option>
+              <option value="D#">D#/Eb</option>
+              <option value="E" selected="selected">E</option>
+              <option value="F">F</option>
+              <option value="F#">F#/Gb</option>
+              <option value="G">G</option>
+              <option value="G#">G#/Ab</option>
+              <option value="A">A</option>
+              <option value="A#">A#/Bb</option>
+              <option value="B">B</option>
+            </select>
+            <select id="octave2">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6" selected="selected">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pendulum"><div id="pendulum3" class="penJS pElement"></div>
+          <div class="control pElement">
+            <select id="note3">
+              <option value="C">C</option>
+              <option value="C#">C#/Db</option>
+              <option value="D">D</option>
+              <option value="D#">D#/Eb</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="F#">F#/Gb</option>
+              <option value="G" selected="selected">G</option>
+              <option value="G#">G#/Ab</option>
+              <option value="A">A</option>
+              <option value="A#">A#/Bb</option>
+              <option value="B">B</option>
+            </select>
+            <select id="octave3">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6" selected="selected">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+        </div>
+
+      <div class="title">Polyrhythmically Phasing Pendulums<br/><span style="font-size:10px;line-height: 6px;">by Chris Carin</span></div>
+      <div class="buttons"><button id="pause">Pause</button><button id="reset">Reset</button></div>
+    </div>
+    <button id="start">Initialize</button>
+    <div class="back"><a class="back_link" href="../assignment2_time.html">back&#8629;</a></div>
+    <!-- pendulum script import -->
+    <script type="text/javascript" src="pendulum_classes.js"></script>
+  </body>
+</html>
