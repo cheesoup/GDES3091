@@ -80,7 +80,7 @@ div.negative {
 div#nav {
 	position:fixed;
 	bottom:10px;
-	left:10px;
+  left:5px;
 	font-family:courier;
 	font-size:15px;
 }
