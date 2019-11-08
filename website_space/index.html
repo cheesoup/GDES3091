@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Hello!</title>
+        <title>Space of Infinite Possibilities</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <style>
@@ -18,21 +18,38 @@
             font-size: 40px;
             font-weight: 900;
             line-height: 48px;
+            text-transform: capitalize;
 
             border: 10px #FFF solid;
             padding: 20px;
             background: rgba(0,0,0,0.5);
           }
-        </style>
-        <script>
-          window.onload = function() {
-            $('body').css('background-image', "url('images/"+ Math.round(Math.random()*6) + ".jpg')");
-            console.log( "url('images/"+ Math.round(Math.random()*6) + ".jpg')");
+
+          a {
+            text-decoration: none;
+            color: #FFF;
           }
-        </script>
+        </style>
     </head>
     <body>
-      <div class="main">To me, a website is simply a space. As with any space, it is how the owner/user/webmaster/whatever defines this space which gives it meaning or purpose. What makes this space special however is its separation from our own reality. In a way, this space exists in a plane made up entirely of electrical signals. These signals are then abstracted into instructions our computer can request and perform. It’s this sense of abstraction and detachment from our own reality which allows us to shape this said space’s form and function. In that sense, it is a space nearly limitless potential.</div>
-      <script type="text/javascript" src="script.js"></script>
+      <div class="main"><a href="#" id="refresh">To me, a website is simply a space. As with any space, it is how the owner/user/webmaster/whatever defines this space which gives it meaning or purpose. What makes this space special however is its separation from our own reality. In a way, this space exists in a plane made up entirely of electrical signals. These signals are then abstracted into instructions our computer can request and perform. It’s this sense of abstraction and detachment from our own reality which allows us to shape this said space’s form and function. In that sense, it is a space nearly limitless potential.</a></div>
+      <script>
+
+        function randomBg() {
+          $('body').css('background-image', "url('images/"+ Math.round(Math.random()*6) + ".jpg')");
+          return false;
+        }
+
+
+
+        window.onload = function() {
+          randomBg();
+          var refresh = document.getElementById('refresh');
+          refresh.onclick = function() {
+            randomBg();
+            return false;
+          }
+        }
+      </script>
     </body>
 </html>
