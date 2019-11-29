@@ -14,11 +14,11 @@ class note_scale {
 
 var step = -1;
 Tone.Transport.bpm.value = 140;
-Tone.Transport.start("+5", "0:0:0");
+Tone.Transport.start("+2", "0:0:0");
 
 var vol = new Tone.Volume(-12);
-var scale = new note_scale(['C', 'D', 'E', 'F', 'G', 'A', 'B']);
-var shifted = 0;
+var scale = new note_scale([ 'B', 'C', 'D', 'E', 'F', 'G', 'A']);
+var shifted = -1;
 
 var bass = new Tone.MonoSynth({
  "oscillator" : {
@@ -82,21 +82,6 @@ var hat = new Tone.MetalSynth({
 
 Tone.Transport.scheduleRepeat(function(time){
   step = (step + 1) % 16;
-	/*
-	if (step == 0){
-		scale.modal_shift();
-		shifted++;
-		if (shifted > 3) {
-			scale = new note_scale(['C', 'D', 'E', 'F', 'G', 'A', 'B']);
-			shifted = 0;
-		}
-		arp_seq.at("0", scale.get_note(0, 4));
-		arp_seq.at("1", scale.get_note(3, 4));
-		arp_seq.at("2", scale.get_note(4, 4));
-		bass_seq.at("0", scale.get_note(0, 3));
-		bass_seq.at("3", scale.get_note(0, 3));
-	}
-	*/
 	Tone.Draw.schedule(function(){
 		$('#beat_led' + step).css('background-color', '#FF0000');
 		$('#beat_led' + step).css('border', '#FFF 3px solid');
@@ -125,6 +110,21 @@ var bass_seq = new Tone.Sequence(function(time, note){
 Tone.Transport.scheduleRepeat(function(time){
 	kick.triggerAttackRelease("C2", "4n");
 }, "4n");
+
+Tone.Transport.scheduleRepeat(function(time){
+	scale.modal_shift();
+	shifted++;
+	if (shifted >= 7) {
+		scale = new note_scale(['B', 'C', 'D', 'E', 'F', 'G', 'A']);
+		shifted = 0;
+	}
+	console.log(shifted);
+	arp_seq.at("0", scale.get_note(0, 4));
+	arp_seq.at("1", scale.get_note(3, 4));
+	arp_seq.at("2", scale.get_note(4, 4));
+	bass_seq.at("0", scale.get_note(0, 3));
+	bass_seq.at("3", scale.get_note(0, 3));
+}, "1n");
 
 var hat_seq = new Tone.Sequence(function(time, freq){
 	hat.frequency.setValueAtTime(freq, time, 1);
