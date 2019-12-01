@@ -1,0 +1,72 @@
+body {
+  background: #000000;
+  text-align: center;
+}
+
+button {
+  /* position */
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -150px;
+  height: 100px;
+  width: 300px;
+  padding: 0;
+
+  /* transition */
+  -webkit-transition: border 0.5s; /* Safari prior 6.1 */
+  transition: border 0.5s;
+
+  /* font, border, & bg */
+  font-size: 50px;
+  font-weight: bolder;
+  color: #FFF;
+  border: 0px solid #000;
+  background: #000;
+}
+
+button:hover {
+  cursor: help;
+  border: 10px solid #fff;
+}
+
+button#restart {
+  visibility: hidden;
+}
+
+div#flow {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -400px;
+  margin-left: -400px;
+  width: 800px;
+  height: 800px;
+}
+
+.back {
+  position:fixed;
+  bottom:10px;
+  left:5px;
+  font-family:courier;
+  font-size:15px;
+}
+
+a.back_link {
+  text-decoration:none;
+  font-weight:bold;
+  padding:5px;
+  color:#FFF;
+  background-color:#000;
+}
+
+a.back_link:hover {
+  text-decoration:none;
+  font-weight:bold;
+  padding:5px;
+  border:#000 solid 1px;
+  color:#000;
+  background-color:#FFF;
+}

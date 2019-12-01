@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Hello!</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!--- main content --->
+            <div id="content" style="width:vmax;height:56.25vw;">
+              <!--- dynamic div height >:3 -->
+              <div style="display:inline-block; vertical-align:top; position:relative; width: 300px; margin-left:10px;">
+                <p>Our third assignment for “Interactive Media: Web” was to create a web page that encapsulated some dimension of something. The only the requirements were that the web page was to either include a Javascript library, or was pull from an API of some sort. I had a lot of different ideas for various web pages (such as Pirate Radio Station, a Last.FM remake just for myself, a game of some sort), but ultimately I ended up settling on creating an audio/visual demonstration. This web page is an encapsulation of a curated system of sounds.</p>
+                <p>Shaheer mentioned the reasoning for having such an open ended assignment was to allow us to do whatever we want with it. I have recently fell into the habit of buying music making software from random online sales and while I have dozens of new applications ready to play around with, I just have not found the time to actually try them out. I guess you could say the main inspiration for this project is the fact that it’s almost vacation time and I really just want the projects to end so I can mess around with music stuff again.</p>
+              </div>
+              <div style="display:inline-block; vertical-align:top; position:relative; width: 300px; margin-left:10px;">
+                <p>The making of music through code in general has always been something that has interested me. Here some fun examples that I always like to look back on:
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=iTbs_USBWio">Pure Data Funky by mrp805</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=4tiEfHaRszU">Aphex Flim Generator (in SuperCollider) by rukano</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=smQOiFt8e4Q">Kindohm Live @ ICLC 2016, Hamilton, Ontario</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=XaruOAMtgdc">11EDO algorithmic IDM in Pure Data by acriel</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=O4T7pIs--LA">Random PC-DOS Demoscene Mix</a></li>
+                </ul></p>
+                <p>The actual making of this assignment was a pain in the ass. This is because Web Audio is not great for real-time music synthesis. Or maybe it is, and I just can’t figure out how to make it great at this given time. Either way, real-time signal synthesis is very taxing process and web browsers are not made to deal with it. This makes total sense if one were to think about it. A digital audio signal is a simulation of “real” audio signal. In order to achieve that sense of “realness” the CPU must calculate about 44100 samples per second (or more of the user demands it). That is over 2.5 million calculations per minute. I believe if I were to do this project on a bigger scale, I would want to encorporate server-side scripting to handle audio processing for me.</p>
+              </div>
+              <div style="display:inline-block; vertical-align:top; position:relative; width: 300px; margin-left:10px;">
+                <p>I once again used <a href="https://tonejs.github.io/">ToneJS</a> to produce most of the sounds for this assignment. The drums however are pre-rendered samples I obtained from a <a href="https://samplesfrommars.com">Samples from Mars</a> sample pack. At some point, I was thinking of switching to <a href="https://github.com/sebpiq/WebPd">WebPD</a> for the audio as I do have knowledge of Max/MSP and Pure Data. However, after trying it out I realized that the library came with its own bag of issues. The visuals were created using the <a href="https://p5js.org/">P5JS</a> library. I was initially planning to simply create a CSS grid which would change in properties according triggers within the song, but I soon realized ToneJS’s transport function does not like calling DOM changes due to the AudioContext running on a different thread than the document. I was initially worried having P5JS on top of ToneJS would cause more performance issues but surprisingly, I was wrong.</p>
+                <p><a href="assignment_3/index.html">Click here for the web page.</a></p>
+              </div>
+            </div>
+            <!--- menu bar --->
+            <!--- https://www.w3schools.com/howto/howto_js_collapsible.asp // Collapsing Divs --->
+            <div class="sidebar">
+                <a href="index.html"><img src="images/speechbubble.png"></a>
+
+                <!--- GRPH3091: web --->
+                <div class="menuwrap">
+                    <div class="menu-cat">
+                    <button class="collapsible">GDES-3091</button>
+                        <div class="menu_cont">
+                            <ul class="menu">
+                                <li class="menu-entry">
+                                    <a href="response1.html">Turing Complete User</a>
+                                    <p class="description">Week 1 Response</p>
+                                </li>
+                                <li class="menu-entry">
+                                    <a href="response2.html">The Poetry of Tools</a>
+                                    <p class="description">Week 2 Response</p>
+                                </li>
+                                <li class="menu-entry">
+                                    <a href="response3.html">My website is a shifting house...</a>
+                                    <p class="description">Week 3 Response</p>
+                                </li>
+                                <li class="menu-entry">
+                                    <a href="assignment1_alphabet.html">CSS Alphabet & Poster</a>
+                                    <p class="description">Assignment 1</p>
+                                </li>
+                                <li class="menu-entry">
+                                    <a href="assignment2_time.html">Web Verbs</a>
+                                    <p class="description">Assignment 2</p>
+                                </li>
+                                <li class="menu-entry">
+                                    <a href="assignment3_flow.html">Networked Document</a>
+                                    <p class="description">Assignment 3</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--- GRPH3089: generative media --->
+                    <div class="menu-cat">
+                    <button class="collapsible">GDES-3089</button>
+                        <div class="menu_cont">
+                            <ul class="menu">
+                              <li class="menu-entry">
+                                  <a href="assignment1_ballchimes.html">Ball Chimes</a>
+                                  <p class="description">Assignment 1</p>
+                              </li>
+                              <li class="menu-entry">
+                                  <a href="assignment2_facetrioscil.html">FACETRIOSCIL</a>
+                                  <p class="description">Assignment 2</p>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--- misc. --->
+                    <div class="menu-cat">
+                    <button class="collapsible">MISC</button>
+                        <div class="menu_cont">
+                            <ul class="menu">
+                                <li class="menu-entry">
+                                    <a href="party/time.html">party time!</a>
+                                    <p class="description">click here!!!11</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- script credits from above link -->
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var menu_cont = this.nextElementSibling;
+                if (menu_cont.style.display === "block") {
+                    menu_cont.style.display = "none";
+                } else {
+                    menu_cont.style.display = "block";
+                }
+                });
+            }
+        </script>
+
+    </body>
+</html>
