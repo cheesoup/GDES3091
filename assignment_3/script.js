@@ -2,8 +2,6 @@
 var the_scale = ['C', 'D', 'E', 'F', 'G', 'A', 'B']; // scale to be played
 var bpm = 130; // beats per minute
 var volume = -30;
-var fg;
-var bg;
 
 // start button
 $("#start").click(function(){
@@ -12,6 +10,7 @@ $("#start").click(function(){
 	sequence_setup(); // setup sequences for playback
 	$("#flow").css("visibility", "visible"); // show animation
 	$("#start").css("visibility", "hidden"); // hide splash
+	Tone.Transport.start("+1", "0:0:0"); // start in 1 second
 });
 
 $("#restart").click(function(){
@@ -162,7 +161,6 @@ function tone_setup() {
 	Tone.context.latencyHint = 0.08; // peak forward to reduce lag
 	var vol = new Tone.Volume(volume); // set vol
 	Tone.Transport.bpm.value = bpm; // set bpm
-	Tone.Transport.start("+1", "0:0:0"); // start in 1 second
 }
 
 // Function for initializing instruments & audio processes
