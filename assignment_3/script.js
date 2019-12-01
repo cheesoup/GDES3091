@@ -190,11 +190,11 @@ function instrument_setup() {
   // Samples were purchased from Samples from Mars
 	// https://samplesfrommars.com/
 	sampler = new Tone.Sampler({
-		"C3" : "/samples/kick.wav",
-		"E3" : "/samples/Snare_1.wav",
-		"F3" : "/samples/Snare_2.wav",
-		"F#3" : "/samples/CH.wav",
-		"G3" : "/samples/Cowbell.wav",
+		"C3" : "samples/kick.wav",
+		"E3" : "samples/Snare_1.wav",
+		"F3" : "samples/Snare_2.wav",
+		"F#3" : "samples/CH.wav",
+		"G3" : "samples/Cowbell.wav",
 	}).connect(comp);
 
 	// instrument volume control
