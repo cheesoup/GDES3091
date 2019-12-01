@@ -160,7 +160,7 @@ function tone_setup() {
 	Tone.context.latencyHint = 0.08; // peak forward to reduce lag
 	var vol = new Tone.Volume(volume); // set vol
 	Tone.Transport.bpm.value = bpm; // set bpm
-	Tone.Transport.start("+3", "0:0:0"); // start in 1 second
+	Tone.Transport.start("+1", "0:0:0"); // start in 1 second
 }
 
 // Function for initializing instruments & audio processes
@@ -188,11 +188,11 @@ function instrument_setup() {
   // Samples were purchased from Samples from Mars
 	// https://samplesfrommars.com/
 	sampler = new Tone.Sampler({
-		"C3" : "/samples/kick.wav",
-		"E3" : "/samples/Snare_1.wav",
-		"F3" : "/samples/Snare_2.wav",
-		"F#3" : "/samples/CH.wav",
-		"G3" : "/samples/Cowbell.wav",
+		"C3" : "Kick.wav",
+		"E3" : "Snare_1.wav",
+		"F3" : "Snare_2.wav",
+		"F#3": "CH.wav",
+		"G3" : "Cowbell.wav",
 	}).connect(comp);
 
 	// instrument volume control
