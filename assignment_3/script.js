@@ -1,6 +1,6 @@
 
 var the_scale = ['C', 'D', 'E', 'F', 'G', 'A', 'B']; // scale to be played
-var bpm = 130; // beats per minute
+var bpm = 125; // beats per minute
 var volume = -30;
 
 // start button
@@ -50,7 +50,7 @@ function setup() {
 	var cnv = createCanvas(800, 800, P2D);
 	cnv.parent('flow'); // bind canvas to #flow
   stroke(255);
-  frameRate(24);
+  frameRate(30);
 
 	// setup for each visiualizer square and other elements related to them
 	which_pad_vis[0] = 7;
@@ -130,9 +130,7 @@ class note_scale {
 var notes = new note_scale(the_scale); // place scale within a new instance of the note_scale class
 var note_visuals = new Array(); // array of square animations
 
-// instruments & effects
-var hp;
-var comp;
+// instruments
 var bass;
 var pad;
 var synth;
