@@ -50,7 +50,7 @@ function setup() {
 	var cnv = createCanvas(800, 800, P2D);
 	cnv.parent('flow'); // bind canvas to #flow
   stroke(255);
-  frameRate(30);
+  frameRate(24);
 
 	// setup for each visiualizer square and other elements related to them
 	which_pad_vis[0] = 7;
@@ -167,25 +167,14 @@ function tone_setup() {
 // Audio processing functions used are pre-made intrument/effect functions available
 // with the toneJS library
 function instrument_setup() {
-	comp = new Tone.Compressor({ // also for mixing
-		"ratio" : 10,
-		"threshold" : -5,
-		"release" : 0.25,
-		"attack" : 0.003,
-		"knee" : 30
-	}).toMaster();
-	hp = new Tone.Filter(200, "highpass").connect(comp); // also for mixing
-
-	bass = new Tone.DuoSynth().connect(comp);
-	pad = new Tone.DuoSynth().connect(hp);
-
+	bass = new Tone.DuoSynth().toMaster();
+	pad = new Tone.DuoSynth().toMaster();
 	synth = new Tone.PolySynth(6, Tone.Synth, {
 		"oscillator" : {
 			"type" : "square"
 		}
-	}).connect(hp);
-
-  // Samples were purchased from Samples from Mars
+	}).toMaster();
+  	// Samples were purchased from Samples from Mars
 	// https://samplesfrommars.com/
 	sampler = new Tone.Sampler({
 		"C3" : "Kick.wav",
@@ -193,7 +182,7 @@ function instrument_setup() {
 		"F3" : "Snare_2.wav",
 		"F#3": "CH.wav",
 		"G3" : "Cowbell.wav",
-	}).connect(comp);
+	}).toMaster();
 
 	// instrument volume control
 	pad.volume.value = -10;
