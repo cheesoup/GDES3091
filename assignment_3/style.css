@@ -1,5 +1,5 @@
 body {
-  background: #000000;
+  background: #2b2c28;
   text-align: center;
 }
 
@@ -21,14 +21,14 @@ button {
   /* font, border, & bg */
   font-size: 50px;
   font-weight: bolder;
-  color: #FFF;
-  border: 0px solid #000;
-  background: #000;
+  color: #7de2d1;
+  border: 0px solid #2b2c28;
+  background: #2b2c28;
 }
 
 button:hover {
   cursor: help;
-  border: 10px solid #fff;
+  border: 10px solid #7de2d1;
 }
 
 button#restart {
@@ -46,6 +46,19 @@ div#flow {
   height: 800px;
 }
 
+div#info {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: 100px;
+  text-align: center;
+  width: 300px;
+  font-family:courier;
+  font-size:15px;
+  color:#7de2d1;
+}
+
 .back {
   position:fixed;
   bottom:10px;
@@ -58,15 +71,15 @@ a.back_link {
   text-decoration:none;
   font-weight:bold;
   padding:5px;
-  color:#FFF;
-  background-color:#000;
+  color:#7de2d1;
+  background-color:#2b2c28;
 }
 
 a.back_link:hover {
   text-decoration:none;
   font-weight:bold;
   padding:5px;
-  border:#000 solid 1px;
-  color:#000;
-  background-color:#FFF;
+  border:#2b2c28 solid 1px;
+  color:#2b2c28;
+  background-color:#7de2d1;
 }

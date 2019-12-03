@@ -1,6 +1,6 @@
 
 var the_scale = ['C', 'D', 'E', 'F', 'G', 'A', 'B']; // scale to be played
-var bpm = 125; // beats per minute
+var bpm = 130; // beats per minute
 var volume = -30;
 
 // start button
@@ -10,6 +10,7 @@ $("#start").click(function(){
 	sequence_setup(); // setup sequences for playback
 	$("#flow").css("visibility", "visible"); // show animation
 	$("#start").css("visibility", "hidden"); // hide splash
+	$("#info").css("visibility", "hidden"); // hide splash
 });
 
 $("#restart").click(function(){
@@ -57,23 +58,23 @@ function setup() {
 	which_pad_vis[1] = 8;
 
 	//constructor(x_, y_, c_, sc_, sw_, f_)
-	note_visuals[0] = new note_visual(width/2, height/2, 0, 255, 3, 5); // cowbell
-	note_visuals[1] = new note_visual(width/2, height/2, 255, 0, 0, 20); // snare
-	note_visuals[2] = new note_visual(width/2, height/2, 0, 255, 1, 8); // kick
-	note_visuals[3] = new note_visual(width/2, height/2, 255, 0, 0, 10); // hihat
+	note_visuals[0] = new note_visual(width/2, height/2, color('#2b2c28'), color('#7de2d1'), 3, 5); // cowbell
+	note_visuals[1] = new note_visual(width/2, height/2, color('#7de2d1'), color('#2b2c28'), 0, 20); // snare
+	note_visuals[2] = new note_visual(width/2, height/2, color('#2b2c28'), color('#7de2d1'), 1, 8); // kick
+	note_visuals[3] = new note_visual(width/2, height/2, color('#7de2d1'), color('#2b2c28'), 0, 10); // hihat
 
-	note_visuals[4] = new note_visual(width/4, height/2, 0, 255, 1, 5); // bass 1
-	note_visuals[5] = new note_visual(width*3/4, height/2, 0, 255, 1, 5); // bass 2
-	note_visuals[6] = new note_visual(width/2, height/4, 0, 255, 1, 5); // bass 3
+	note_visuals[4] = new note_visual(width/4, height/2, color('#2b2c28'), color('#7de2d1'), 1, 5); // bass 1
+	note_visuals[5] = new note_visual(width*3/4, height/2, color('#2b2c28'), color('#7de2d1'), 1, 5); // bass 2
+	note_visuals[6] = new note_visual(width/2, height/4, color('#2b2c28'), color('#7de2d1'), 1, 5); // bass 3
 
-	note_visuals[7] = new note_visual(width/4, height/4, 255, 0, 1, 2); // pad 1 1
-	note_visuals[8] = new note_visual(width*3/4, height/4, 255, 0, 1, 2); // pad 2 1
-	note_visuals[9] = new note_visual(width/4, height/4, 0, 255, 1, 1); // pad 1 2
-	note_visuals[10] = new note_visual(width*3/4, height/4, 0, 255, 1, 1); // pad 2 2
+	note_visuals[7] = new note_visual(width/4, height/4, color('#7de2d1'), color('#2b2c28'), 1, 2); // pad 1 1
+	note_visuals[8] = new note_visual(width*3/4, height/4, color('#7de2d1'), color('#2b2c28'), 1, 2); // pad 2 1
+	note_visuals[9] = new note_visual(width/4, height/4, color('#2b2c28'), color('#7de2d1'), 1, 1); // pad 1 2
+	note_visuals[10] = new note_visual(width*3/4, height/4, color('#2b2c28'), color('#7de2d1'), 1, 1); // pad 2 2
 
-	note_visuals[11] = new note_visual(width/4, height*3/4, 0, 255, 1, 20); // arp 1
-	note_visuals[12] = new note_visual(width/2, height*3/4, 0, 255, 1, 20); // arp 2
-	note_visuals[13] = new note_visual(width*3/4, height*3/4, 0, 255, 1, 20); // arp 3
+	note_visuals[11] = new note_visual(width/4, height*3/4, color('#2b2c28'), color('#7de2d1'), 1, 20); // arp 1
+	note_visuals[12] = new note_visual(width/2, height*3/4, color('#2b2c28'), color('#7de2d1'), 1, 20); // arp 2
+	note_visuals[13] = new note_visual(width*3/4, height*3/4, color('#2b2c28'), color('#7de2d1'), 1, 20); // arp 3
 }
 
 // p5js animation loop
@@ -130,7 +131,9 @@ class note_scale {
 var notes = new note_scale(the_scale); // place scale within a new instance of the note_scale class
 var note_visuals = new Array(); // array of square animations
 
-// instruments
+// instruments & effects
+var hp;
+var comp;
 var bass;
 var pad;
 var synth;
@@ -167,16 +170,18 @@ function tone_setup() {
 function instrument_setup() {
 	bass = new Tone.DuoSynth().toMaster();
 	pad = new Tone.DuoSynth().toMaster();
+
 	synth = new Tone.PolySynth(6, Tone.Synth, {
 		"oscillator" : {
 			"type" : "square"
 		}
 	}).toMaster();
-  	// Samples were purchased from Samples from Mars
+
+  // Samples were purchased from Samples from Mars
 	// https://samplesfrommars.com/
 	sampler = new Tone.Sampler({
 		"C3" : "Kick.wav",
-		"E3" : "Snare_1.wav",
+		"E3" : "Snare.wav",
 		"F#3": "CH.wav",
 		"G3" : "Cowbell.wav",
 	}).toMaster();
