@@ -177,7 +177,6 @@ function instrument_setup() {
 	sampler = new Tone.Sampler({
 		"C3" : "Kick.wav",
 		"E3" : "Snare_1.wav",
-		"F3" : "Snare_2.wav",
 		"F#3": "CH.wav",
 		"G3" : "Cowbell.wav",
 	}).toMaster();
@@ -272,7 +271,6 @@ function sequence_setup() {
 
 	snare_loop = new Tone.Loop(function(time){ // snare loop
 		sampler.triggerAttack("E3");
-		sampler.triggerAttack("F3");
 		Tone.Draw.schedule(function(){
 			note_visuals[1].bang(200);
 		}, time)
